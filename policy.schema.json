@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Jsnap policy schema",
+  "type": "object",
+  "properties": {
+    "allowed_paths": { "type": "array", "items": { "type": "string" } },
+    "encryption": { "enum": ["dpapi", "password"] },
+    "retention_days": { "type": "integer" },
+    "watermark": { "type": "boolean" }
+  },
+  "required": ["encryption"]
+}
